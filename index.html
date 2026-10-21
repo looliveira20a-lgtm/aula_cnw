@@ -1126,7 +1126,7 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        // Lista completa de produtos
+        // Lista completa de produtos (o hambúrguer de frango é o primeiro da lista)
         const products = [
             {
                 id: 1,
@@ -1134,7 +1134,7 @@
                 category: "artesanais",
                 price: 28.50,
                 badge: "Frango Crocante",
-                desc: "Hambúrguer de peito de frango super crocante, queijo derretido, alface fresca, tomate e maionese especial.",
+                desc: "Hambúrguer de peito de frango empanado super crocante, queijo muçarela derretido, alface fresca, tomate e molho honey mustard.",
                 image: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80"
             },
             {
@@ -1399,8 +1399,8 @@
             e.target.reset();
         });
 
-        // Inicialização
-        renderMenu();
+        // Inicialização com a aba 'todos' selecionada
+        renderMenu('todos');
     </script>
 </body>
 </html>
