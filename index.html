@@ -1055,12 +1055,8 @@
                         <input type="text" class="form-control" placeholder="Seu nome" required>
                     </div>
                     <div class="form-group">
-                        <label>E-mail ou Telefone</label>
-                        <input type="text" class="form-control" placeholder="Seu contato" required>
-                    </div>
-                    <div class="form-group">
                         <label>Mensagem</label>
-                        <textarea class="form-control" placeholder="Como podemos te ajudar?"></textarea>
+                        <textarea class="form-control" placeholder="Sua mensagem..." required></textarea>
                     </div>
                     <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">Enviar Mensagem</button>
                 </form>
@@ -1068,191 +1064,166 @@
         </div>
     </section>
 
-    <!-- RODAPÉ -->
+    <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <a href="#" class="logo">
-                        <i class="fa-solid fa-burger"></i>
-                        Mania's <span>Lanches</span>
-                    </a>
-                    <p class="footer-desc">A sua melhor opção em hambúrgueres e porções irresistíveis. Qualidade em primeiro lugar!</p>
-                </div>
-                <div>
-                    <h4 class="footer-title">Links Rápidos</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#cardapio">Cardápio</a></li>
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="footer-title">Redes Sociais</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
+        <div class="container footer-grid">
+            <div>
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-burger"></i>
+                    Mania's <span>Lanches</span>
+                </a>
+                <p class="footer-desc">Os melhores lanches artesanais da cidade, feitos com paixão, qualidade e sabor incomparável.</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Navegação</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
-            <div class="copyright">
-                &copy; 2026 Mania's Lanches. Todos os direitos reservados.
-            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Mania's Lanches. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <!-- CARRINHO DRAWER (MODAL LATERAL) -->
+    <!-- PAINEL DO CARRINHO (DRAWER) -->
     <div class="cart-overlay" id="cart-overlay"></div>
     <div class="cart-drawer" id="cart-drawer">
         <div class="cart-header">
-            <h3><i class="fa-solid fa-bag-shopping" style="color: var(--primary);"></i> Seu Pedido</h3>
+            <h3><i class="fa-solid fa-bag-shopping"></i> Seu Pedido</h3>
             <button class="close-cart-btn" id="close-cart-btn"><i class="fa-solid fa-xmark"></i></button>
         </div>
-
         <div class="cart-items" id="cart-items">
             <!-- Itens do carrinho aparecem aqui -->
         </div>
-
         <div class="cart-footer">
             <div class="cart-total-row">
                 <span>Total:</span>
-                <span id="cart-total-price">R$ 0,00</span>
+                <span id="cart-total">R$ 0,00</span>
             </div>
             <button class="checkout-btn" id="checkout-btn">
-                <i class="fa-brands fa-whatsapp"></i> Enviar Pedido via WhatsApp
+                <i class="fa-brands fa-whatsapp"></i> Finalizar pelo WhatsApp
             </button>
         </div>
     </div>
 
-    <!-- NOTIFICAÇÃO TOAST -->
+    <!-- TOAST DE NOTIFICAÇÃO -->
     <div class="toast" id="toast">
-        <i class="fa-solid fa-circle-check"></i> Item adicionado ao carrinho!
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-msg">Item adicionado com sucesso!</span>
     </div>
 
     <!-- JAVASCRIPT -->
     <script>
-        // ==========================================================================
-        // DADOS DO CARDÁPIO
-        // ==========================================================================
-        const menuData = [
+        // Dados do Cardápio
+        const products = [
             {
                 id: 1,
                 name: "Mania's Monster Burger",
                 category: "artesanais",
                 price: 38.90,
-                desc: "Dois hambúrgueres de 160g, cheddar duplo, bacon crocante, cebola caramelizada e molho especial no pão brioche.",
                 badge: "Mais Vendido",
-                img: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=500&q=80"
+                desc: "Dois hambúrgueres de 160g, cheddar duplo, bacon crocante, cebola caramelizada e molho especial.",
+                image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 2,
-                name: "Smash Bacon Supreme",
+                name: "Smash Bacon Bacon",
                 category: "artesanais",
                 price: 29.90,
-                desc: "Hambúrguer Smash 120g, queijo americano derretido, tiras de bacon extra crocantes e maionese verde da casa.",
                 badge: "Novo",
-                img: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=80"
+                desc: "Hambúrguer smash 100g, queijo prato derretido, tiras duplas de bacon crocante e maionese verde.",
+                image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 3,
-                name: "X-Salada Tradicional",
+                name: "X-Tudo Tradicional",
                 category: "tradicionais",
-                price: 22.00,
-                desc: "Hambúrguer tradicional, queijo muçarela, alface americana fresca, tomate suculento e maionese temperada.",
-                badge: "",
-                img: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=500&q=80"
+                price: 26.50,
+                badge: "Clássico",
+                desc: "Hambúrguer, presunto, queijo, ovo, bacon, milho, alface, tomate e maionese da casa.",
+                image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 4,
-                name: "X-Tudo Mania",
-                category: "tradicionais",
-                price: 28.50,
-                desc: "Hambúrguer, ovo, presunto, queijo, bacon, calabrês, alface, tomate e milho no pão de hambúrguer gigante.",
-                badge: "Completo",
-                img: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=500&q=80"
+                name: "Batata Suprema com Cheddar & Bacon",
+                category: "porcoes",
+                price: 32.00,
+                badge: "Porção",
+                desc: "Porção generosa de batatas rústicas ou crocantes cobertas com creme de cheddar cremoso e bacon em cubos.",
+                /* Imagem corrigida para uma porção de batata frita realista e de alta qualidade */
+                image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 5,
-                name: "Batata Suprema com Cheddar & Bacon",
-                category: "porcoes",
-                price: 32.90,
-                desc: "400g de batata frita bem crocante coberta com molho cheddar cremoso e bacon em cubos.",
-                badge: "Ideal p/ 2",
-                img: "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=500&q=80"
+                name: "Milkshake Crocante Ovomaltine",
+                category: "sobremesas",
+                price: 18.90,
+                badge: "Sobremesa",
+                desc: "500ml de puro sorvete cremoso de baunilha batido com bastante Ovomaltine e calda de chocolate.",
+                image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 6,
-                name: "Tiras de Frango Empanado",
-                category: "porcoes",
-                price: 34.00,
-                desc: "Tiras de peito de frango super crocantes servidas com molho barbecue e maionese de alho.",
-                badge: "",
-                img: "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=500&q=80"
-            },
-            {
-                id: 7,
-                name: "Milkshake Doce de Leite com Churros",
-                category: "sobremesas",
-                price: 18.90,
-                desc: "Milkshake cremoso de 500ml com borda generosa de doce de leite, chantilly e mini churros crocante.",
-                badge: "Delícia",
-                img: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500&q=80"
-            },
-            {
-                id: 8,
-                name: "Refrigerante Lata (350ml)",
+                name: "Refrigerante Lata 350ml",
                 category: "bebidas",
                 price: 6.50,
-                desc: "Coca-Cola, Guaraná Antarctica, Fanta Laranja ou Sprite bem gelados.",
-                badge: "",
-                img: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=500&q=80"
+                badge: "Gelado",
+                desc: "Coca-Cola, Guaraná Antarctica, Fanta Laranja ou Sprite. Bem gelado para acompanhar.",
+                image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80"
             }
         ];
 
-        // Estado do Carrinho
         let cart = [];
 
-        // DOM Elements
+        // Elementos DOM
         const menuGrid = document.getElementById('menu-grid');
         const cartDrawer = document.getElementById('cart-drawer');
         const cartOverlay = document.getElementById('cart-overlay');
         const openCartBtn = document.getElementById('open-cart-btn');
         const closeCartBtn = document.getElementById('close-cart-btn');
         const cartItemsContainer = document.getElementById('cart-items');
-        const cartCountBadge = document.getElementById('cart-count');
-        const cartTotalPrice = document.getElementById('cart-total-price');
+        const cartCount = document.getElementById('cart-count');
+        const cartTotal = document.getElementById('cart-total');
         const checkoutBtn = document.getElementById('checkout-btn');
-        const tabBtns = document.querySelectorAll('.tab-btn');
         const toast = document.getElementById('toast');
+        const toastMsg = document.getElementById('toast-msg');
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const navLinks = document.getElementById('nav-links');
 
-        // ==========================================================================
-        // CARREGAR CARDÁPIO
-        // ==========================================================================
-        function renderMenu(categoryFilter = "todos") {
-            menuGrid.innerHTML = "";
+        // Renderizar Produtos
+        function renderMenu(categoryFilter = 'todos') {
+            menuGrid.innerHTML = '';
+            
+            const filteredProducts = categoryFilter === 'todos' 
+                ? products 
+                : products.filter(p => p.category === categoryFilter);
 
-            const filteredItems = categoryFilter === "todos" 
-                ? menuData 
-                : menuData.filter(item => item.category === categoryFilter);
-
-            filteredItems.forEach(item => {
+            filteredProducts.forEach(prod => {
                 const card = document.createElement('div');
                 card.className = 'food-card';
                 card.innerHTML = `
                     <div class="food-img-box">
-                        <img src="${item.img}" alt="${item.name}" class="food-img">
-                        ${item.badge ? `<span class="food-badge">${item.badge}</span>` : ''}
+                        <img src="${prod.image}" alt="${prod.name}" class="food-img">
+                        ${prod.badge ? `<span class="food-badge">${prod.badge}</span>` : ''}
                     </div>
                     <div class="food-info">
-                        <h3 class="food-title">${item.name}</h3>
-                        <p class="food-desc">${item.desc}</p>
+                        <h3 class="food-title">${prod.name}</h3>
+                        <p class="food-desc">${prod.desc}</p>
                         <div class="food-bottom">
-                            <span class="food-price">R$ ${item.price.toFixed(2).replace('.', ',')}</span>
-                            <button class="add-to-cart-btn" onclick="addToCart(${item.id})">
+                            <span class="food-price">R$ ${prod.price.toFixed(2).replace('.', ',')}</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(${prod.id})">
                                 <i class="fa-solid fa-plus"></i>
                             </button>
                         </div>
@@ -1262,123 +1233,97 @@
             });
         }
 
-        // ==========================================================================
-        // LÓGICA DO CARRINHO
-        // ==========================================================================
-        function addToCart(productId) {
-            const product = menuData.find(p => p.id === productId);
-            const existingItem = cart.find(item => item.id === productId);
+        // Filtro por abas
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                const targetBtn = e.currentTarget;
+                targetBtn.classList.add('active');
+                const category = targetBtn.getAttribute('data-category');
+                renderMenu(category);
+            });
+        });
 
-            if (existingItem) {
-                existingItem.quantity += 1;
+        // Adicionar ao Carrinho
+        function addToCart(id) {
+            const product = products.find(p => p.id === id);
+            const itemInCart = cart.find(item => item.id === id);
+
+            if (itemInCart) {
+                itemInCart.quantity++;
             } else {
                 cart.push({ ...product, quantity: 1 });
             }
 
             updateCartUI();
-            showToast();
+            showToast(`"${product.name}" foi adicionado!`);
         }
 
-        function updateCartQuantity(productId, amount) {
-            const item = cart.find(i => i.id === productId);
-            if (item) {
-                item.quantity += amount;
-                if (item.quantity <= 0) {
-                    cart = cart.filter(i => i.id !== productId);
-                }
-            }
-            updateCartUI();
-        }
-
-        function removeFromCart(productId) {
-            cart = cart.filter(i => i.id !== productId);
-            updateCartUI();
-        }
-
+        // Atualizar UI do Carrinho
         function updateCartUI() {
-            // Contagem total
-            const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
-            cartCountBadge.textContent = totalCount;
-
-            // Total R$
-            const totalValue = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-            cartTotalPrice.textContent = `R$ ${totalValue.toFixed(2).replace('.', ',')}`;
-
-            // Renderizar itens
-            cartItemsContainer.innerHTML = "";
+            cartItemsContainer.innerHTML = '';
 
             if (cart.length === 0) {
                 cartItemsContainer.innerHTML = `
                     <div class="cart-empty-msg">
-                        <i class="fa-solid fa-basket-shopping"></i>
+                        <i class="fa-solid fa-cart-flatbed"></i>
                         <p>Seu carrinho está vazio.</p>
                     </div>
                 `;
+                cartCount.textContent = '0';
+                cartTotal.textContent = 'R$ 0,00';
                 return;
             }
 
+            let total = 0;
+            let totalItems = 0;
+
             cart.forEach(item => {
-                const itemEl = document.createElement('div');
-                itemEl.className = 'cart-item';
-                itemEl.innerHTML = `
-                    <img src="${item.img}" alt="${item.name}" class="cart-item-img">
+                total += item.price * item.quantity;
+                totalItems += item.quantity;
+
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+                itemElement.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-img">
                     <div class="cart-item-details">
-                        <h4 class="cart-item-title">${item.name}</h4>
-                        <span class="cart-item-price">R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}</span>
+                        <div class="cart-item-title">${item.name}</div>
+                        <div class="cart-item-price">R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}</div>
                         <div class="cart-item-qty">
-                            <button class="qty-btn" onclick="updateCartQuantity(${item.id}, -1)">-</button>
+                            <button class="qty-btn" onclick="changeQty(${item.id}, -1)">-</button>
                             <span>${item.quantity}</span>
-                            <button class="qty-btn" onclick="updateCartQuantity(${item.id}, 1)">+</button>
+                            <button class="qty-btn" onclick="changeQty(${item.id}, 1)">+</button>
                         </div>
                     </div>
                     <button class="cart-item-remove" onclick="removeFromCart(${item.id})">
                         <i class="fa-solid fa-trash-can"></i>
                     </button>
                 `;
-                cartItemsContainer.appendChild(itemEl);
+                cartItemsContainer.appendChild(itemElement);
             });
+
+            cartCount.textContent = totalItems;
+            cartTotal.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
         }
 
-        // ==========================================================================
-        // CHECKOUT VIA WHATSAPP
-        // ==========================================================================
-        checkoutBtn.addEventListener('click', () => {
-            if (cart.length === 0) {
-                alert("Adicione pelo menos um item ao carrinho antes de finalizar!");
-                return;
+        function changeQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (item) {
+                item.quantity += delta;
+                if (item.quantity <= 0) {
+                    removeFromCart(id);
+                } else {
+                    updateCartUI();
+                }
             }
+        }
 
-            let message = "🍔 *Novo Pedido - Mania's Lanches* 🍔\n\n";
-            message += "*Itens do Pedido:*\n";
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCartUI();
+        }
 
-            cart.forEach(item => {
-                message += `• ${item.quantity}x ${item.name} - R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}\n`;
-            });
-
-            const total = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-            message += `\n*Total:* R$ ${total.toFixed(2).replace('.', ',')}\n\n`;
-            message += "Por favor, confirme meu pedido!";
-
-            const phoneNumber = "5511999998888"; // Número fictício do WhatsApp
-            const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-        });
-
-        // ==========================================================================
-        // UI INTERAÇÕES & EVENTOS
-        // ==========================================================================
-        
-        // Filtro por categorias
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                tabBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const category = btn.dataset.category;
-                renderMenu(category);
-            });
-        });
-
-        // Abrir/Fechar Carrinho
+        // Abrir e fechar carrinho
         openCartBtn.addEventListener('click', () => {
             cartDrawer.classList.add('active');
             cartOverlay.classList.add('active');
@@ -1392,22 +1337,37 @@
         closeCartBtn.addEventListener('click', closeCart);
         cartOverlay.addEventListener('click', closeCart);
 
-        // Toast de confirmação
-        function showToast() {
+        // Toast
+        function showToast(message) {
+            toastMsg.textContent = message;
             toast.classList.add('show');
             setTimeout(() => {
                 toast.classList.remove('show');
-            }, 2500);
+            }, 3000);
         }
 
-        // Header Scrolled Style
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+        // Finalizar Pedido no WhatsApp
+        checkoutBtn.addEventListener('click', () => {
+            if (cart.length === 0) {
+                alert('Seu carrinho está vazio!');
+                return;
             }
+
+            let msg = '🍔 *NOVO PEDIDO - MANIA\'S LANCHES* 🍔\n\n';
+            let total = 0;
+
+            cart.forEach(item => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+                msg += `• *${item.quantity}x* ${item.name} - R$ ${subtotal.toFixed(2).replace('.', ',')}\n`;
+            });
+
+            msg += `\n*Total:* R$ ${total.toFixed(2).replace('.', ',')}`;
+            msg += `\n\n_Por favor, informe seu endereço para entrega!_`;
+
+            const phone = "5511999998888";
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+            window.open(url, '_blank');
         });
 
         // Menu Mobile Toggle
@@ -1415,25 +1375,15 @@
             navLinks.classList.toggle('active');
         });
 
-        // Fechar menu mobile ao clicar em um link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Form Submit Prevent Default
+        // Form contato
         document.getElementById('contact-form').addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Obrigado pela mensagem! Entraremos em contato em breve.');
+            showToast('Mensagem enviada com sucesso!');
             e.target.reset();
         });
 
-        // Inicializar aplicação
-        window.onload = () => {
-            renderMenu();
-            updateCartUI();
-        };
+        // Inicialização
+        renderMenu();
     </script>
 </body>
 </html>
