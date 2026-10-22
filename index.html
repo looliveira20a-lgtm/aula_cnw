@@ -1133,9 +1133,9 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        // Data do Cardápio Ajustada com Exatamente 6 Itens por Categoria
+        // Data do Cardápio Ajustada: EXATAMENTE 7 ITENS POR CATEGORIA (Respeitando mín 6 / máx 9)
         const menuProducts = [
-            // ==================== ARTESANAIS (6 ITENS) ====================
+            // ==================== 1. ARTESANAIS (7 ITENS) ====================
             {
                 id: 1,
                 name: "Monster Bacon",
@@ -1190,10 +1190,19 @@
                 desc: "Hambúrguer artesanal de grão-de-bico com cogumelos salteados no alho poró e queijo prato.",
                 img: "https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=600&q=80"
             },
-
-            // ==================== TRADICIONAIS (6 ITENS) ====================
             {
                 id: 7,
+                name: "Costela Premium",
+                category: "artesanais",
+                badge: "Suculento",
+                price: 39.90,
+                desc: "Hambúrguer de costela bovina 200g, queijo coalho tostado, maionese de alho e geleia de pimenta.",
+                img: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80"
+            },
+
+            // ==================== 2. TRADICIONAIS (7 ITENS) ====================
+            {
+                id: 8,
                 name: "X-Salada Tradicional",
                 category: "tradicionais",
                 badge: "Clássico",
@@ -1202,7 +1211,7 @@
                 img: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 8,
+                id: 9,
                 name: "X-Tudo Mania",
                 category: "tradicionais",
                 badge: "Completo",
@@ -1211,7 +1220,7 @@
                 img: "https://images.unsplash.com/photo-1607013251379-e6eecfffe234?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 9,
+                id: 10,
                 name: "X-Frango Especial",
                 category: "tradicionais",
                 badge: "Suave",
@@ -1220,7 +1229,7 @@
                 img: "https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 10,
+                id: 11,
                 name: "X-Bacon Tradicional",
                 category: "tradicionais",
                 badge: "Popular",
@@ -1229,7 +1238,7 @@
                 img: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 11,
+                id: 12,
                 name: "X-Egg Burguer",
                 category: "tradicionais",
                 badge: "Tradicional",
@@ -1238,7 +1247,7 @@
                 img: "https://images.unsplash.com/photo-1512152272829-e3139592d56f?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 12,
+                id: 13,
                 name: "Misto Quente Especial",
                 category: "tradicionais",
                 badge: "Leve",
@@ -1246,10 +1255,19 @@
                 desc: "Pão de forma tostado na manteiga com bastante presunto fatiado e queijo muçarela derretido.",
                 img: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80"
             },
-
-            // ==================== PORÇÕES (6 ITENS) ====================
             {
-                id: 13,
+                id: 14,
+                name: "Bauru Especial",
+                category: "tradicionais",
+                badge: "Clássico",
+                price: 21.50,
+                desc: "Pão francês prensado, rosbife suculento, queijo derretido, tomate fresco e picles em rodelas.",
+                img: "https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=600&q=80"
+            },
+
+            // ==================== 3. PORÇÕES (7 ITENS) ====================
+            {
+                id: 15,
                 name: "Batata Suprema Crocante",
                 category: "porcoes",
                 badge: "Para Dividir",
@@ -1258,7 +1276,7 @@
                 img: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 14,
+                id: 16,
                 name: "Onion Rings Crocantes",
                 category: "porcoes",
                 badge: "Favorito",
@@ -1267,7 +1285,7 @@
                 img: "https://images.unsplash.com/photo-1639024471283-03518883512d?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 15,
+                id: 17,
                 name: "Nuggets Crocantes (12 un)",
                 category: "porcoes",
                 badge: "Crocante",
@@ -1276,7 +1294,7 @@
                 img: "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 16,
+                id: 18,
                 name: "Mandioca Frita na Manteiga",
                 category: "porcoes",
                 badge: "Tradicional",
@@ -1285,7 +1303,7 @@
                 img: "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 17,
+                id: 19,
                 name: "Calabresa Acebolada",
                 category: "porcoes",
                 badge: "Petisco",
@@ -1294,7 +1312,7 @@
                 img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 18,
+                id: 20,
                 name: "Iscas de Frango Empanadas",
                 category: "porcoes",
                 badge: "Delícia",
@@ -1302,10 +1320,19 @@
                 desc: "Tiras de peito de frango temperadas e empanadas na farinha panko com molho mostarda e mel.",
                 img: "https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=600&q=80"
             },
-
-            // ==================== BEBIDAS (6 ITENS) ====================
             {
-                id: 19,
+                id: 21,
+                name: "Polenta Frita com Queijo",
+                category: "porcoes",
+                badge: "Crocante",
+                price: 21.00,
+                desc: "Bastões de polenta crocante por fora e macia por dentro, cobertos com queijo parmesão ralado.",
+                img: "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80"
+            },
+
+            // ==================== 4. BEBIDAS (7 ITENS) ====================
+            {
+                id: 22,
                 name: "Coca-Cola LATA 350ml",
                 category: "bebidas",
                 badge: "Gelada",
@@ -1314,7 +1341,7 @@
                 img: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 20,
+                id: 23,
                 name: "Suco Natural de Laranja 500ml",
                 category: "bebidas",
                 badge: "Natural",
@@ -1323,7 +1350,7 @@
                 img: "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 21,
+                id: 24,
                 name: "Guaraná Antarctica 2L",
                 category: "bebidas",
                 badge: "Família",
@@ -1332,7 +1359,7 @@
                 img: "https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 22,
+                id: 25,
                 name: "Água Mineral com Gás 500ml",
                 category: "bebidas",
                 badge: "Refrescante",
@@ -1341,7 +1368,7 @@
                 img: "https://images.unsplash.com/photo-1559839914-17aae19cec71?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 23,
+                id: 26,
                 name: "Soda Limonada Artesanal",
                 category: "bebidas",
                 badge: "Gelada",
@@ -1350,7 +1377,7 @@
                 img: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 24,
+                id: 27,
                 name: "Chá Gelado de Limão 450ml",
                 category: "bebidas",
                 badge: "Refrescante",
@@ -1358,10 +1385,19 @@
                 desc: "Chá preto gelado com gotas de limão e pedras de gelo, ideal para dias quentes.",
                 img: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80"
             },
-
-            // ==================== SOBREMESAS (6 ITENS) ====================
             {
-                id: 25,
+                id: 28,
+                name: "Cerveja Heineken Long Neck",
+                category: "bebidas",
+                badge: "Adulto",
+                price: 12.00,
+                desc: "Cerveja Heineken garrafa 330ml bem gelada.",
+                img: "https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&w=600&q=80"
+            },
+
+            // ==================== 5. SOBREMESAS (7 ITENS) ====================
+            {
+                id: 29,
                 name: "Milkshake de Nutella 400ml",
                 category: "sobremesas",
                 badge: "Delicioso",
@@ -1370,7 +1406,7 @@
                 img: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 26,
+                id: 30,
                 name: "Petit Gâteau com Sorvete",
                 category: "sobremesas",
                 badge: "Irresistível",
@@ -1379,7 +1415,7 @@
                 img: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 27,
+                id: 31,
                 name: "Brownie com Calda Quente",
                 category: "sobremesas",
                 badge: "Novidade",
@@ -1388,7 +1424,7 @@
                 img: "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 28,
+                id: 32,
                 name: "Churros de Doce de Leite",
                 category: "sobremesas",
                 badge: "Crocante",
@@ -1397,7 +1433,7 @@
                 img: "https://images.unsplash.com/photo-1624371414361-e670ef4889d5?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 29,
+                id: 33,
                 name: "Pudim de Leite Condensado",
                 category: "sobremesas",
                 badge: "Caseiro",
@@ -1406,13 +1442,22 @@
                 img: "https://images.unsplash.com/photo-1528975604071-b4dc52a2d18c?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 30,
+                id: 34,
                 name: "Torta Holandesa",
                 category: "sobremesas",
                 badge: "Especial",
                 price: 18.00,
-                desc: "Fatia de torta gelada com creme leve de baunilha, cobertura de ganache de chocolate e biscoito de calipso.",
+                desc: "Fatia de torta gelada com creme leve de baunilha, cobertura de ganache de chocolate e biscoito calipso.",
                 img: "https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 35,
+                name: "Milkshake de Morango Natural",
+                category: "sobremesas",
+                badge: "Refrescante",
+                price: 18.50,
+                desc: "Milkshake super cremoso preparado com sorvete de baunilha e calda artesanal de morangos frescos.",
+                img: "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=600&q=80"
             }
         ];
 
