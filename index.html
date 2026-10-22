@@ -1133,7 +1133,7 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        // Data do Cardápio com Imagens e Preços Alinhados e Corretos
+        // Data do Cardápio Ampliado com Imagens e Preços Alinhados
         const menuProducts = [
             // ARTESANAIS
             {
@@ -1163,10 +1163,28 @@
                 desc: "2x carnes smash 90g prensadas na chapa, crostinha perfeita, muito queijo prato e picles de pimenta.",
                 img: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80"
             },
+            {
+                id: 4,
+                name: "Crispy Chicken Burguer",
+                category: "artesanais",
+                badge: "Especial",
+                price: 31.90,
+                desc: "Sobrecoxa de frango super crocante, salada coleslaw, maionese verde artesanal e queijo cheddar derretido.",
+                img: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 5,
+                name: "Onion BBQ Burguer",
+                category: "artesanais",
+                badge: "Saboroso",
+                price: 33.50,
+                desc: "Hambúrguer 180g, anéis de cebola empanados crocantes, queijo derretido, bacon e molho barbecue rústico.",
+                img: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f6?auto=format&fit=crop&w=600&q=80"
+            },
 
             // TRADICIONAIS
             {
-                id: 4,
+                id: 6,
                 name: "X-Salada Tradicional",
                 category: "tradicionais",
                 badge: "Clássico",
@@ -1175,7 +1193,7 @@
                 img: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 5,
+                id: 7,
                 name: "X-Tudo Mania",
                 category: "tradicionais",
                 badge: "Completo",
@@ -1183,10 +1201,28 @@
                 desc: "Hambúrguer, ovo, bacon, presunto, queijo, milho, batata palha, alface, tomate e molho especial.",
                 img: "https://images.unsplash.com/photo-1607013251379-e6eecfffe234?auto=format&fit=crop&w=600&q=80"
             },
+            {
+                id: 8,
+                name: "X-Frango Especial",
+                category: "tradicionais",
+                badge: "Suave",
+                price: 24.50,
+                desc: "Filé de frango grelhado e suculento, queijo prato derretido, milho verde, alface, tomate e maionese da casa.",
+                img: "https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 9,
+                name: "X-Bacon Tradicional",
+                category: "tradicionais",
+                badge: "Popular",
+                price: 25.90,
+                desc: "Hambúrguer clássico, fatias generosas de bacon crocante, queijo derretido e maionese temperada.",
+                img: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80"
+            },
 
             // PORÇÕES
             {
-                id: 6,
+                id: 10,
                 name: "Batata Suprema Crocante",
                 category: "porcoes",
                 badge: "Para Dividir",
@@ -1195,7 +1231,16 @@
                 img: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 7,
+                id: 11,
+                name: "Onion Rings Crocantes",
+                category: "porcoes",
+                badge: "Favorito",
+                price: 24.90,
+                desc: "Anéis de cebola empanados e douradinhos, acompanhados de molho especial barbecue da casa.",
+                img: "https://images.unsplash.com/photo-1639024471283-03518883512d?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 12,
                 name: "Nuggets Crocantes (12 un)",
                 category: "porcoes",
                 badge: "Crocante",
@@ -1203,10 +1248,19 @@
                 desc: "Empanados de frango super macios por dentro e crocantes por fora, acompanhados de molho leve de alho.",
                 img: "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80"
             },
+            {
+                id: 13,
+                name: "Mandioca Frita na Manteiga",
+                category: "porcoes",
+                badge: "Tradicional",
+                price: 23.00,
+                desc: "Porção de mandioca dourada e macia, servida com queijo ralado e molho de ervas.",
+                img: "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80"
+            },
 
             // BEBIDAS
             {
-                id: 8,
+                id: 14,
                 name: "Coca-Cola LATA 350ml",
                 category: "bebidas",
                 badge: "Gelada",
@@ -1215,7 +1269,7 @@
                 img: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 9,
+                id: 15,
                 name: "Suco Natural de Laranja 500ml",
                 category: "bebidas",
                 badge: "Natural",
@@ -1223,10 +1277,28 @@
                 desc: "Suco 100% natural de laranja feito na hora sem adição de conservantes.",
                 img: "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80"
             },
+            {
+                id: 16,
+                name: "Guaraná Antarctica 2L",
+                category: "bebidas",
+                badge: "Família",
+                price: 14.00,
+                desc: "Garrafa de Guaraná Antarctica 2 litros bem gelada para acompanhar seu lanche.",
+                img: "https://images.unsplash.com/photo-1527960471264-932f39eb5846?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 17,
+                name: "Água Mineral com Gás 500ml",
+                category: "bebidas",
+                badge: "Refrescante",
+                price: 4.50,
+                desc: "Garrafa de água mineral com gás refrescante com rodela de limão opcional.",
+                img: "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=600&q=80"
+            },
 
             // SOBREMESAS
             {
-                id: 10,
+                id: 18,
                 name: "Milkshake de Nutella 400ml",
                 category: "sobremesas",
                 badge: "Delicioso",
@@ -1235,13 +1307,31 @@
                 img: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80"
             },
             {
-                id: 11,
+                id: 19,
                 name: "Petit Gâteau com Sorvete",
                 category: "sobremesas",
                 badge: "Irresistível",
                 price: 21.00,
                 desc: "Bolo quente de chocolate com recheio cremoso escorrendo, acompanhado de uma bola de sorvete de baunilha.",
                 img: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 20,
+                name: "Brownie com Calda de Chocolate",
+                category: "sobremesas",
+                badge: "Novidade",
+                price: 16.50,
+                desc: "Brownie denso e fofinho de chocolate meio amargo, coberto com calda quente e pedaços de nozes.",
+                img: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 21,
+                name: "Churros Recheados com Doce de Leite",
+                category: "sobremesas",
+                badge: "Crocante",
+                price: 15.00,
+                desc: "4 unidades de mini churros crocantes recheados com doce de leite cremoso e polvilhados com açúcar e canela.",
+                img: "https://images.unsplash.com/photo-1624371414361-e670ef4889d5?auto=format&fit=crop&w=600&q=80"
             }
         ];
 
